@@ -1,0 +1,36 @@
+- **FastSocket Overview**: High-performance, real-time messaging with FastAPI, Socket.IO, AsyncAPI, Pydantic, Typer,
+  Logfire, RxPY.
+- **Core Components**:
+    - **FastAPI**: Async server for API requests.
+    - **Socket.IO**: Real-time bidirectional communication.
+    - **AsyncAPI**: Standardizes event-driven interactions, auto-generates handlers.
+    - **Pydantic**: Validates and enforces data integrity.
+    - **Typer CLI**: Command-line tool for server and event management.
+    - **Logfire**: Real-time log monitoring.
+    - **RxPY**: Enables reactive programming for complex event streams.
+- **Architecture Goals**: Scalability, maintainability, and efficient event handling.
+- **Commands & CLI**:
+    - **Server Management**: Start, stop, status, reload.
+    - **Event Commands**: Register, list, and trigger events.
+    - **Log Commands**: View, tail, clear logs.
+    - **AsyncAPI**: Import, validate, generate docs.
+- **Event Handling**: Uses `event_registry.py` for dynamic, hot-reloadable event registration; validates data with
+  Pydantic.
+- **Logging**: Configured with Loguru for structured, rotated logs; integrates Logfire for real-time analytics.
+- **Reactive Model**: RxPY Subjects handle event streams, allowing asynchronous, reactive flows.
+- **Deployment**:
+    - **Docker**: Containerized setup with a Dockerfile and Docker Compose for environment consistency.
+    - **Scaling**: Supports horizontal scaling with load balancers for high concurrency.
+- **Testing**: Pytest suite for CLI, API endpoints, and module integrity; validates API behavior, command functionality,
+  and event handling.
+- **Code Generation**:
+    - **AsyncAPI-Based**: CLI automates backend event handlers, frontend Vue components based on AsyncAPI specs.
+- **Optimization**:
+    - **Asynchronous Operations**: Non-blocking FastAPI and Socket.IO calls.
+    - **Real-Time Log Management**: Logs structured for readability and rotation.
+    - **Reactive Streams**: RxPY enables responsive, scalable event processing.
+- **Future Enhancements**:
+    - **Dashboard**: Nuxt.js for event and log monitoring.
+    - **Auth**: JWT-based API security, role-based controls.
+    - **Distributed Event Handling**: Potential for Kafka/RabbitMQ integrations for load balancing.
+- **Documentation Goals**: Clarity in setup, event handling, AsyncAPI integrations, Docker deployment, and CLI usage.
